@@ -13,9 +13,10 @@ $datos = json_decode(file_get_contents('php://input'));
 if ($datos) {
     if (Cliente::update(
         $datos->id,
-        $datos->fecha,
-        $datos->titulo,
-        $datos->texto1,
+        $datos->Zona,
+        $datos->Marca,
+        $datos->Talle,
+        $datos->Sexo,
     )) {
         echo json_encode(['update' => true]);
     } else {

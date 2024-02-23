@@ -2,10 +2,10 @@
     
 // Desarrollado por Paulo Contrera - www.paulo-contrera.com para SygSeguros
     
-    $user = "admin";
-    $pass = "admin@";
+    $user = "root";
+    $pass = "";
     $server = "localhost";
-    $db ="nombre de la base de datos xD";
+    $db ="tesis";
 
 class Connection extends mysqli {
     function __construct() {

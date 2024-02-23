@@ -4,22 +4,21 @@
 
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: X-API-KEY, Origin,  Content-Type, Accept, Access-Control-Request-Method');
+header('Access-Control-Allow-Methods: PUT');
 
 require_once '../models/Cliente.php';
 
 $datos = json_decode(file_get_contents('php://input'));
 
-if ($datos !== null) {
-    $result = Cliente::insert(
-        $datos->SKU, 
-        $datos->RFID,
-        $datos->Zona, 
-        $datos->Marca,
-        $datos->Talle, 
-        $datos->Sexo,
-    );
+if ($datos) {
+    if (Cliente::updateZona(
+        $datos->id,
+        $datos->Zona,
+    )) {
+        echo json_encode(['update' => true]);
+    } else {
+        echo json_encode(['update' => false]);
+    }
 } else {
-    $result = false;
+    echo json_encode(['update' => false]);
 }
-
-echo json_encode(['insert' => $result]);
