@@ -1,0 +1,12 @@
+body
+{
+    background: #232526;  /* fallback for old browsers */
+
+}
+
+h1,a
+{
+    color:#fff;
+    font-size: 2em;
+}
+
