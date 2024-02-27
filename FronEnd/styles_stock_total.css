@@ -1,0 +1,38 @@
+/* Estilos para el título */
+h1 {
+    text-align: center; /* Centrar el texto */
+    margin: 40px auto; /* Espacio exterior y centrado horizontal */
+    font-size: 48px; /* Tamaño de la fuente para el título */
+    font-family: Arial, sans-serif; /* Fuente Arial o sans-serif */
+    background-color: #103157; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 16px; /* Radio de las esquinas */
+    padding: 30px 60px; /* Aumenta el relleno */
+    width: fit-content; /* Ancho se ajusta al contenido */
+    max-width: 80%; /* Ancho máximo del título */
+}
+
+/* Estilos para el contenido */
+p {
+    text-align: center; /* Alineación del texto */
+    font-size: 24px; /* Tamaño de la fuente para el contenido */
+    margin: 20px auto; /* Margen y centrado horizontal */
+}
+
+/* Estilos para el botón */
+button {
+    display: block; /* Mostrar como bloque */
+    margin: 20px auto; /* Margen y centrado horizontal */
+    padding: 15px 30px; /* Aumenta el relleno */
+    font-size: 20px; /* Tamaño de la fuente para el botón */
+    background-color: #103157; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Radio de las esquinas */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilos para el botón al pasar el cursor */
+button:hover {
+    background-color: #0B204E; /* Cambia el color de fondo al pasar el cursor */
+}
