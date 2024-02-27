@@ -1,0 +1,60 @@
+
+<div class="stock-titulo" >
+    <a routerLink="/" >
+        <img src="../../../assets/icons8-volver-96.png" alt="">
+    </a>
+    <div class="stock-tituloSolo">
+    <h1>Stock Total</h1>
+    </div>
+</div>
+<table>
+  <tbody>
+    <tr *ngFor="let producto of productos">
+      <div class="stock-productosTodos">
+        <div class="stock-producto">
+          <div class="stock-numeracion">
+            <p>
+              ID: {{producto.id}}
+            </p>
+            <p>
+              SKU: {{producto.SKU}}
+            </p>
+            <p>
+              RFID: {{producto.RFID}}
+            </p>
+          </div>
+          <div class="stock-zona-horas">
+            <div class="stock-zona">
+              <p>
+                Hora Creacion: {{producto.HoraCreacion}}
+              </p>
+            </div>
+            <div class="stock-horas-moviento">
+              <p>
+                Zona: {{producto.Zona}}
+              </p>
+
+              <p>
+                Hora Movimiento: {{producto.HoraMov}}
+              </p>
+            </div>
+          </div>
+          <div class="stock-datosextra">
+            <p>
+              Marca: {{producto.Marca}}
+            </p>
+            <p>
+              Talle: {{producto.Talle}}
+            </p>
+            <p>
+              Sexo: {{producto.Sexo}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </tr>
+
+
+  </tbody>
+</table>

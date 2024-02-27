@@ -1,0 +1,44 @@
+
+.tituloPrincipal {
+    text-align: center; /* Centrar el texto */
+    margin: 40px auto; /* Espacio exterior y centrado horizontal */
+    font-size: 48px; /* Tamaño de la fuente para el título */
+    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto */
+    background-color: #103157; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 16px; /* Radio de las esquinas */
+    padding: 30px 60px; /* Aumenta el relleno */
+    width: fit-content; /* Ancho se ajusta al contenido */
+    max-width: 80%; /* Ancho máximo del título */
+}
+
+/* Estilos para el contenedor de botones */
+nav {
+    text-align: center; /* Centrar los elementos en línea */
+    margin-top: 40px; /* Espacio superior */
+}
+
+/* Estilos para los botones */
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el espacio de relleno */
+    margin: 0; /* Elimina el margen */
+}
+
+nav ul li {
+    display: block; /* Muestra los elementos como bloques */
+    margin-bottom: 20px; /* Margen inferior entre botones */
+}
+
+.menu-enlaces {
+    background-color: #103157; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como elemento en línea */
+    font-size: 32px; /* Tamaño del texto de los botones */
+    border-radius: 16px; /* Radio de las esquinas */
+    padding: 40px 80px; /* Aumenta el relleno */
+    width: 300px; /* Ancho fijo de los botones */
+    font-family: 'Roboto', sans-serif; /* Utiliza la fuente Roboto */
+}

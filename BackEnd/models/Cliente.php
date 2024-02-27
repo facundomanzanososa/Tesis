@@ -37,9 +37,11 @@
 
         public static function insert($SKU, $RFID, $Zona, $Marca, $Talle, $Sexo) {
             $db = new Connection();
-            $query = "INSERT INTO productos(SKU, RFID, Zona, Marca, Talle, Sexo) VALUES (?,?,?,?,?,?)";
+            date_default_timezone_set('America/Buenos_Aires');
+            $fecha = date("Y-m-d H:i:s");
+            $query = "INSERT INTO productos(SKU, RFID, Zona, HoraCreacion, HoraMov, Marca, Talle, Sexo) VALUES (?,?,?,?,?,?,?,?)";
             $stmt = $db->prepare($query);
-            $stmt->bind_param("ssssss",$SKU, $RFID, $Zona, $Marca, $Talle, $Sexo);
+            $stmt->bind_param("ssssssss",$SKU, $RFID, $Zona, $fecha, $fecha, $Marca, $Talle, $Sexo);
             $stmt->execute();
             return $stmt->affected_rows > 0;
         }
@@ -55,9 +57,11 @@
 
         public static function updateZona($id_cliente, $Zona) {
             $db = new Connection();
-            $query = "UPDATE productos SET Zona=? WHERE id=?";
+            date_default_timezone_set('America/Buenos_Aires');
+            $fecha = date("Y-m-d H:i:s");
+            $query = "UPDATE productos SET Zona=?, HoraMov=? WHERE id=?";
             $stmt = $db->prepare($query);
-            $stmt->bind_param("si", $Zona, $id_cliente);
+            $stmt->bind_param("ssi", $Zona, $fecha, $id_cliente);
             $stmt->execute();
             return $stmt->affected_rows > 0;
         }
