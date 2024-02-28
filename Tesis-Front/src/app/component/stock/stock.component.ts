@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ConsultasService } from 'src/app/services/consultas.service';
-import { Mostrar } from 'src/app/services/mostrar';
+import { Mostrar } from 'src/app/models/mostrar';
 @Component({
   selector: 'app-stock',
   templateUrl: './stock.component.html',

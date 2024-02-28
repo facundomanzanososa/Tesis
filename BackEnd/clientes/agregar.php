@@ -10,6 +10,7 @@ require_once '../models/Cliente.php';
 $datos = json_decode(file_get_contents('php://input'));
 
 if ($datos !== null) {
+    
     $result = Cliente::insert(
         $datos->SKU, 
         $datos->RFID,

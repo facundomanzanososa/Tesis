@@ -1,7 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {Mostrar } from './mostrar';
+import {Mostrar } from '../models/mostrar';
+import {Agregar } from '../models/agregar';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,9 @@ export class ConsultasService {
   public lista(): Observable<Mostrar[]>{
     return this.httpClient.get<Mostrar[]>(this.URL + 'seleccionar.php');
   }
-
+  public crear(producto: Agregar): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'agregar.php', producto);
+  }
   // public individual(id: UltimosId): Observable<Novedades>{
   //   return this.httpClient.get<Novedades>(this.URL + `seleccionar.php?id=${id}`);
   // } 

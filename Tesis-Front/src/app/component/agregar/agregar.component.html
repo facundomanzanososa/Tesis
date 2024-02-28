@@ -1,1 +1,41 @@
-<p>agregar works!</p>
+<div class="agregar-titulo">
+  <a routerLink="/">
+    <img src="../../../assets/icons8-volver-96.png" alt="">
+  </a>
+  <div class="agregar-tituloSolo">
+    <h1>Agregar producto</h1>
+  </div>
+</div>
+<form [formGroup]="form"  (ngSubmit)="agregarproducto()" >
+  <div class="nuevo-contenido">
+    <div class="subcontenidoImportante">
+      <div>
+        <label for="nombre">SKU:</label>
+        <input type="number" placeholder="234623456" formControlName="SKU">
+      </div>
+      <div>
+        <label for="nombre">RFID:</label>
+        <input type="text" placeholder="j2346h364fI" formControlName="RFID">
+      </div>
+    </div>
+    <div class="subcontenido">
+      <div>
+        <label for="nombre">Marca:</label>
+        <input type="text" placeholder="Nike" formControlName="Marca">
+      </div>
+      <div>
+        <label for="nombre">Talle:</label>
+        <input type="number" placeholder="38" formControlName="Talle">
+      </div>
+      <div>
+        <label for="nombre">Sexo:</label>
+        <input type="number" placeholder="0" formControlName="Sexo">
+      </div>
+      <div>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <button>Subir</button>
+  </div>
+</form>
