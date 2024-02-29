@@ -1,1 +1,70 @@
-<p>buscar works!</p>
+<div class="buscar-titulo">
+    <a routerLink="/">
+      <img src="../../../assets/icons8-volver-96.png" alt="">
+    </a>
+    <div class="buscar-tituloSolo">
+      <h1>Buscar producto</h1>
+    </div>
+  </div>
+  <form [formGroup]="form"  (ngSubmit)="buscarproducto()"   >
+    <div class="nuevo-contenido">
+      <div class="subcontenido">
+        <div>
+          <label for="nombre">ID:</label>
+          <input type="number" placeholder="12" formControlName="id">
+        </div>
+      </div>
+    </div>
+    <div class="button">
+      <button>Buscar</button>
+    </div>
+  </form>
+  <table *ngIf=mostrar>
+    <tbody>
+      <tr>
+        <div class="buscar-productosTodos">
+          <div class="buscar-producto">
+            <div class="buscar-numeracion">
+              <p>
+                ID: {{producto.id}}
+              </p>
+              <p>
+                SKU: {{producto.SKU}}
+              </p>
+              <p>
+                RFID: {{producto.RFID}}
+              </p>
+            </div>
+            <div class="buscar-zona-horas">
+              <div class="buscar-zona">
+                <p>
+                  Hora Creacion: {{producto.HoraCreacion}}
+                </p>
+              </div>
+              <div class="buscar-horas-moviento">
+                <p>
+                  Zona: {{producto.Zona}}
+                </p>
+  
+                <p>
+                  Hora Movimiento: {{producto.HoraMov}}
+                </p>
+              </div>
+            </div>
+            <div class="buscar-datosextra">
+              <p>
+                Marca: {{producto.Marca}}
+              </p>
+              <p>
+                Talle: {{producto.Talle}}
+              </p>
+              <p>
+                Sexo: {{producto.Sexo}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+  

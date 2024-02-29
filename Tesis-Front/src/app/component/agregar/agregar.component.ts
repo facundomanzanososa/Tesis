@@ -41,6 +41,8 @@ export class AgregarComponent {
     
   }
   agregarproducto(): void {
+    Loading.standard('Cargando...');
+
     const zona=19;
     const producto = new Agregar(
       this.form.value.SKU,
@@ -53,12 +55,10 @@ export class AgregarComponent {
       console.log(producto);
       this.agregarS.crear(producto).subscribe(
         data => {
-          // console.log(data);
           Notify.success('¡Operación exitosa!');
     
              this.router.navigate(['']);
              Loading.remove();
-    
            }, err => {
              Notify.failure('¡Ups! Algo salió mal');
              this.router.navigate(['']);

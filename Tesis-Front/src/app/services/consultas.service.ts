@@ -20,9 +20,11 @@ export class ConsultasService {
   public crear(producto: Agregar): Observable<any>{
     return this.httpClient.post<any>(this.URL + 'agregar.php', producto);
   }
-  // public individual(id: UltimosId): Observable<Novedades>{
-  //   return this.httpClient.get<Novedades>(this.URL + `seleccionar.php?id=${id}`);
-  // } 
+   public individual(id: number): Observable<Mostrar>{
+    console.log(id);
+    
+     return this.httpClient.get<Mostrar>(this.URL + `seleccionar.php?id=${id}`);
+   } 
  
 /*
   public crear(cursos: Novedades): Observable<any>{
