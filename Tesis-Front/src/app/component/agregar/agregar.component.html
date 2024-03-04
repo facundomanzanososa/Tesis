@@ -6,19 +6,21 @@
     <h1>Agregar producto</h1>
   </div>
 </div>
-<form [formGroup]="form"  (ngSubmit)="agregarproducto()" >
   <div class="nuevo-contenido">
     <div class="subcontenidoImportante">
       <div>
         <label for="nombre">SKU:</label>
-        <input type="number" placeholder="234623456" formControlName="SKU">
+        <input type="text" value="{{ sku[0].SKU }}" readonly>
       </div>
       <div>
         <label for="nombre">RFID:</label>
-        <input type="text" placeholder="j2346h364fI" formControlName="RFID">
+        <input type="text" value="{{ sku[0].RFID }}" readonly>
       </div>
     </div>
+<form [formGroup]="form"  (ngSubmit)="agregarproducto()" >
+
     <div class="subcontenido">
+
       <div>
         <label for="nombre">Marca:</label>
         <input type="text" placeholder="Nike" formControlName="Marca">
@@ -33,9 +35,12 @@
       </div>
       <div>
       </div>
+
     </div>
-  </div>
-  <div class="button">
-    <button>Subir</button>
-  </div>
+  
 </form>
+<div class="button">
+  <button (click)="agregarproducto()" (keyup.enter)="agregarproducto()">Subir</button>
+</div>
+  </div>
+  

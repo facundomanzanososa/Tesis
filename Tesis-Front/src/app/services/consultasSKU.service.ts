@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {Mostrar } from '../models/mostrar';
+import {SKU } from '../models/sku';
 import {Agregar } from '../models/agregar';
 
 @Injectable({
@@ -14,14 +14,14 @@ export class ConsultasSKUService {
   constructor(private httpClient: HttpClient) { }
 
 
-  public lista(): Observable<Mostrar[]>{
-    return this.httpClient.get<Mostrar[]>(this.URL + 'seleccionar.php');
+  public lista(): Observable<SKU[]>{
+    return this.httpClient.get<SKU[]>(this.URL + 'seleccionar.php');
   }
   public crear(producto: Agregar): Observable<any>{
     return this.httpClient.post<any>(this.URL + 'agregar.php', producto);
   }
-  public borrar(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `eliminar.php?id=${id}`);
+  public borrar(): Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `eliminar.php`);
   }
  
 

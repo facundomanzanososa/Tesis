@@ -22,7 +22,10 @@
         
         public static function insert($SKU, $RFID) {
             $db = new Connection();
-            $Zona1=19;
+            $query = "DELETE FROM productos2 ";
+            $stmt = $db->prepare($query);
+            $stmt->execute();
+
             date_default_timezone_set('America/Buenos_Aires');
             $fecha = date("Y-m-d H:i:s");
             $query = "INSERT INTO productos2(SKU, RFID, HoraCreacion) VALUES (?,?,?)";

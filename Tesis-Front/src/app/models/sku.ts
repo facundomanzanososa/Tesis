@@ -1,4 +1,4 @@
-export class Mostrar {
+export class SKU {
     id ? : number;
     SKU: number;
     RFID: number;
