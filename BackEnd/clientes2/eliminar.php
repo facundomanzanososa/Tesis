@@ -8,14 +8,10 @@
 
     require_once "../models/Cliente2.php";
 
-    if(isset($_GET['id'])){
-        if($resultado = Cliente::delete($_GET['id'])) {
+  
+        if($resultado = Cliente::delete()) {
             echo json_encode(['delete' => TRUE]);
         }//end if
         else {
             echo json_encode(['delete' => FALSE]);
         }//end else
-    }//end if 
-    else {
-        echo json_encode(['delete' => FALSE]);
-    }//end else

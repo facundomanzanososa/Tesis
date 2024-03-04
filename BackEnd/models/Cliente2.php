@@ -33,11 +33,10 @@
         }
 
 
-        public static function delete($id_cliente) {
+        public static function delete() {
             $db = new Connection();
-            $query = "DELETE FROM `productos2` WHERE id=?";
+            $query = "DELETE FROM productos2 ";
             $stmt = $db->prepare($query);
-            $stmt->bind_param("i", $id_cliente);
             $stmt->execute();
             return $stmt->affected_rows > 0;
         }
